@@ -80,15 +80,27 @@ h2 {
 	font-size: 150%;
 }
 
-p {
-	padding: 5px 10px;
+h3 {
+	font-weight: bold;
 }
 
-.two-thirds {
-	display: block;
-	margin: 0px 9px 18px 9px;
-	padding: 18px;
-	width: calc((100%/3*2) - 54px);
+dt {
+	font-weight: bold;
+	font-size: 125%;
+	padding: 5px 15px;
+}
+
+dd {
+	padding-left: 25px;
+}
+
+.price {
+	font-style: italic;
+	padding: 5px 25px;
+}
+
+p {
+	padding: 5px 10px;
 }
 
 .one-third {
@@ -98,9 +110,27 @@ p {
 	width: calc((100%/3) - 54px);
 }
 
+.two-thirds {
+	display: block;
+	margin: 0px 9px 18px 9px;
+	padding: 18px;
+	width: calc((100%/3*2) - 54px);
+}
+
+.full-width {
+	display: block;
+	margin: 0px 9px 18px 9px;
+	padding: 18px;
+}
+
 #description {
 	float: left;
 	background-color: #4E2588;
+}
+
+#customize {
+	float: left;
+	background-color: #932565;
 }
 
 #hours {
@@ -114,12 +144,12 @@ p {
 	background-color: #E272B4;
 }
 
-#pizza {
+#pizza , #order-pic {
 	float: right;
 	background-color: #FFF381;
 }
 
-#pizza-pic {
+.content-pic {
 	width: 100%;
 }
 
@@ -137,4 +167,21 @@ p {
 
 #twitter {
 	background-color: #BA9AE8;
+}
+
+#meat  {
+	clear: left;
+	background-color: #9AB3E7;
+}
+
+#veg {
+	background-color: #A69A2A;
+}
+
+#drinks {
+	background-color: #BA9AE8;
+}
+
+#dessert {
+	background-color: #F097CC;
 }
