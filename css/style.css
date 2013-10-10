@@ -123,6 +123,11 @@ p {
 	padding: 18px;
 }
 
+footer {
+	clear: both;
+	background-color: #9A73D1;
+}
+
 #description {
 	float: left;
 	background-color: #4E2588;
@@ -157,11 +162,11 @@ p {
 	background-color: #9AB3E7;
 }
 
-.one-third a {
+.one-third a, #github {
 	color: #FFF;
 }
 
-.one-third a:hover {
+.one-third a:hover, #github:hover {
 	color: #000;
 }
 
