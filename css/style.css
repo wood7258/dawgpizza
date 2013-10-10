@@ -1,6 +1,140 @@
-.logo-bar {
-	background-color: #875AC6;
-	margin: 20px;
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,700);
+@import url(reset.css);
+
+body {
+    background-image: url("../img/dark_wall.png");
+    background-repeat: repeat;
+    font-family: 'Cabin', sans-serif;
+    font-size: 20px;
 	padding: 20px;
-	border-radius: 10px;
+	color: #FFF;
+}
+
+.content-box {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.logo-bar {
+	padding: 10px;
+	margin: 9px 18px;
+	display: block;
+	clear: both;
+	overflow: auto;
+	background-color: #9A73D1;
+}
+
+.logo {
+	display: inline-block;
+	float: left;
+	height: 180px;
+}
+
+.logo img {
+	height: 100%;
+}
+
+h1 {
+	display: block;
+	font-size: 400%;
+	font-weight: bold;
+	padding: 50px;
+}
+
+nav {
+	display: block;
+	margin: 18px 0px;
+	padding: 0px 9px;
+	width: calc(100% - 18px);
+	overflow: auto;
+}
+
+nav a {
+	display: inline-block;
+	margin: 0px 9px;
+	width: 33.33%;	/* in case no calc support */
+	width: calc(100%/3 - 18px);
+	padding: 18px 0px;
+	background-color: #7491CF;
+	color: #FFF;
+	font-size: 125%;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #A69A2A;
+	text-decoration: underline;
+}
+
+.content {
+	margin: 18px 0px;
+	padding: 0px 9px;
+	display: block;
+	clear: both;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 150%;
+}
+
+p {
+	padding: 5px 10px;
+}
+
+.two-thirds {
+	display: block;
+	margin: 0px 9px 18px 9px;
+	padding: 18px;
+	width: calc((100%/3*2) - 54px);
+}
+
+.one-third {
+	display: block;
+	margin: 0px 9px 18px 9px;
+	padding: 18px;
+	width: calc((100%/3) - 54px);
+}
+
+#description {
+	float: left;
+	background-color: #4E2588;
+}
+
+#hours {
+	float: left;
+	clear: right;
+	background-color: #264587;
+}
+
+#info {
+	clear: left;
+	background-color: #E272B4;
+}
+
+#pizza {
+	float: right;
+	background-color: #FFF381;
+}
+
+#pizza-pic {
+	width: 100%;
+}
+
+#contact {
+	background-color: #9AB3E7;
+}
+
+.one-third a {
+	color: #FFF;
+}
+
+.one-third a:hover {
+	color: #000;
+}
+
+#twitter {
+	background-color: #BA9AE8;
 }
