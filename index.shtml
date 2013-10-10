@@ -8,17 +8,7 @@
 	</head>
 	<body>
 		<div class="content-box">
-			<header class="logo-bar">
-				<a href="index.html" class="logo">
-					<img src="img/logo.png" alt="Dawg Pizza Logo">
-				</a>
-				<h1>Dawg Pizza</h1>
-			</header>
-			<nav>
-				<a href="index.html">Home
-				</a><a href="menu.html">Menu
-				</a><a href="about.html">About Us</a>
-			</nav>
+			<!--#include virtual="inc/header.html" -->
 			<div class="content">
 				<div class="two-thirds" id="description">
 					<h2>
@@ -72,17 +62,7 @@
 						<a href="http://www.twitter.com/DawgPizzaSea">@DawgPizzaSea</a>
 					</p>
 				</div>
-				<footer class="full-width">
-					<p>
-						&copy;2013, Dawg Pizza
-					</p>
-					<p>
-						Call us for delivery: 206-555-1212
-					</p>
-					<p>
-						<a href="https://github.com/wood7258/dawgpizza" id="github">https://github.com/wood7258/dawgpizza</a>
-					</p>
-				</footer>
+				<!--#include virtual="inc/footer.html" -->
 			</div>
 		</div>
 	</body>
