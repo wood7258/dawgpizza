@@ -8,12 +8,21 @@
 }
 
 body {
-    background-image: url("../img/dark_wall.png");
+    background-image: url("../img/triangular.png");
     background-repeat: repeat;
+	background-attachment: fixed;
     font-family: 'Cabin', sans-serif;
     font-size: 20px;
 	padding: 20px;
 	color: #FFF;
+}
+
+p {
+	margin: 5px 0px;
+}
+
+nav p {
+	margin: 0;
 }
 
 .container {
@@ -27,21 +36,41 @@ nav:after {
 .navbar-default {
 	background-color: rgba(0,0,0,0);
 	border: none;
-	padding: 0;
+	padding: 5px 0px;
+	margin: 0px;
 }
 
 .navbar-header {
-	background-color: #9AB3E7;
 	width: 50%;
+	padding: 0px 5px;
+}
+
+.navbar-header-content {
+	display: block;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	background-color: #BA9AE8; /*lavender*/
+	width: 100%;
+	height: 180px;
 }
 
 .navbar-brand {
 	display: block;
 	height: 180px;
 	width: 100%;
+	padding: 10px;
+}
+
+.navbar-logo {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	display: block;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
 	background-image: url(../img/logo.png);
 	background-repeat: no-repeat;
-	background-size: 90% 90%;
+	background-size: contain;
 	background-position: center;
 }
 
@@ -67,24 +96,28 @@ nav:after {
 	text-align: center;
 	height: 180px;
 	background-color: #9A73D1;
+	font-weight: bold;
 }
 
 .navbar-default .navbar-nav > li > a{
 	color: #FFF;
-	line-height: 160px;
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
 	color: #FFF;
-	background-color: #E272B4;
+	background-color: #4E2588; /*purple*/
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
 	color: #FFF;
-	background-color: #A69A2A;
+	background-color: #4E2588; /*purple*/
 }
 
 .row {
+	position: relative;
 	margin: 0;
 }
 
@@ -93,30 +126,142 @@ nav:after {
 }
 
 .col-inner {
+	position: relative;
 	padding: 10px;
+	height: 100%;
+	background-color: #932565; /*magenta*/
+	background-color: #E272B4; /*medpink*/
+	background-color: #9AB3E7; /*lightblue*/
+	background-color: #BA9AE8; /*lavender*/
+	background-color: #A69A2A; /*gold*/
+	background-color: #F097CC; /*pink*/
+	background-color: #264587; /*darkblue*/
+	background-color: #4E2588; /*purple*/
+}
+
+.impt {
+	background-color: #932565; /*magenta*/
+}
+
+.col-stack {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	padding: 0px;
+}
+
+.stack  {
+	padding: 5px;
+}
+
+.stack-1 {
+	height: 100%;
+}
+
+.stack-2 {
+	height: 50%;
+}
+
+.stack-3 {
+	height: 33.33333%;
+}
+
+.text-box {
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+
+.text {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.img-col {
+	background-color: transparent;
+	width: 100%;
+	padding: 0;
+}
+
+.img-label {
+	height: 0px;
+	position: absolute;
+	bottom: 0px;
+	padding: 10px;
+	background-color: #4E2588; /*purple*/
+}
+
+.pizza {
+	background-image: url(../img/pizza1.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center 0;
+}
+
+.order {
+	background-image: url(../img/pizza-order.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center -2em;
+}
+
+.show {
+	background-color: #264587; /*darkblue*/
+	margin: 5px;
+}
+
+.show .col-inner {
+	background-color: transparent;
+	border-right: 1px dotted #EEE;
+	border-left: 1px dotted #EEE;
 }
 
 a {
 	color: #FFF;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
 	color: #000;
+}
+
+.ratio-75 {
+	position: relative;
+	top: 0px;
+	padding-top: 75%;
+}
+
+.ratio-66 {
+	position: relative;
+	top: 0px;
+	padding-top: 66.66666%;
+}
+
+.ratio-container {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
 }
 
 .content-pic {
 	width: 100%;
-	border: solid 10px transparent;
+}
+
+.template {
+	display: none;
 }
 	
 h2 {
 	font-weight: bold;
 	font-size: 150%;
-	margin-top: 0;
+	margin: 0;
 }
 
 h3 {
 	font-weight: bold;
+	font-size: 100%;
 }
 
 dt {
@@ -134,69 +279,35 @@ dd {
 	padding: 5px 25px;
 }
 
-p {
-	padding: 5px 10px;
+.no-fill {
+	background-color: transparent;
 }
+
 
 footer {
 	position: fixed;
-	bottom: -20px;
+	bottom: 0px;
+	left: 0px;
 	font-size: 75%;
-	width: 60%;
+	width: 100%;
+	padding: 0px 20px;
+}
+
+.footer-content {
+	padding-bottom: 0px;
+}
+
+.footer .col-inner {
+	background-color: #4E2588; /*purple*/
+}
+
+.footer p {
 	padding: 0;
-}
-
-footer p {
-	padding: 0;
-}
-
-#footer-content {
-	position: relative;
-	left: -10px;
-	margin: 5px;
-	background-color: #9A73D1;
-	padding: 5px;
-}
-
-#description {
-	background-color: #4E2588;
-}
-
-#customize {
-	background-color: #932565;
-}
-
-#hours {
-	background-color: #264587;
-}
-
-#info {
-	background-color: #E272B4;
-}
-
-#pizza , #order-pic , #video {
-	background-color: #FFF381;
-	text-align: center;
-}
-
-#contact, #meat   {
-	background-color: #9AB3E7;
-}
-
-#twitter, #drinks {
-	background-color: #BA9AE8;
-}
-
-#veg{
-	background-color: #A69A2A;
-}
-
-#dessert {
-	background-color: #F097CC;
+	margin: 0;
 }
 
 :focus {
-	border: solid 5px #F00;
+	border: solid 3px #BA9AE8;
 }
 
 @media (max-width:400px) {
@@ -207,40 +318,62 @@ footer p {
 
 }
 
+@media(max-width:1199px) {
+	body {
+		font-size: 16px;
+	}
+}
+
 @media(max-width:991px) {
+	body {
+		font-size: 12px;
+	}
 	.navbar-header {
-		width: 90%;
-		margin: 10px auto;
+		width: 100%;
 		float: none;
+		margin-bottom: 10px;
 	}
 	.navbar-nav {
 		width: 100%;
+		padding: 0px;
 	}
 	.navbar-collapse {
-		width: 90%;
-		margin: 10px auto;
+		width: 100%;
 	}
 	.navbar-nav  a{
 		height: 50px;
-	}
-	.navbar-default .navbar-nav > li > a{
-		line-height: 20px;
 	}
 }
 
 @media(max-width:767px) {
 	.navbar-header {
-		width: 60%;
+		margin: 0px;
 	}
 	.navbar-brand {
+		margin: 0px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	.navbar-logo {
 		background-image: url(../img/logo-vertical.png);
 	}
-
+	.navbar-collapse {
+		border: none;
+	}
+	.navbar-nav {
+		margin: 0px;
+		padding: 0px 5px;
+	}
 	.navbar-nav  li{
 		display: block;
 		width: 100%;
-		margin: 0px 0px;
-		padding: 0px 5px;
+		margin: 0px;
+		padding: 0px;
+		border-top: 1px solid #FFF;
+	}
+	.col-stack, .img-label {
+		position: static;
 	}
 }
 
