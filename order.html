@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<meta name="author" content="wood7258">
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Dawg Pizza | Order</title>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<div class="navbar-header-content">
+						<a href="index.html" class="navbar-brand"><div class="navbar-logo"></div>
+						</a>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+				</div>
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">
+							<div class="text-box">
+								<div class="text">
+									<p>Home</p>
+								</div>
+							</div>
+						</a></li>
+						<li><a href="menu.html">
+							<div class="text-box">
+								<div class="text">
+									<p>Menu</p>
+								</div>
+							</div>
+						</a></li>
+						<li class="active"><a href="#">
+							<div class="text-box">
+								<div class="text">
+									<p>Order</p>
+								</div>
+							</div>
+						</a></li>
+						<li><a href="about.html">
+							<div class="text-box">
+								<div class="text">
+									<p>About Us</p>
+								</div>
+							</div>
+						</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="row show">
+				<div class="col col-sm-4 col-stack">
+					<div class="stack stack-1">
+						<div class="col-inner">
+							<h2>
+								Where do we deliver?
+							</h2>
+							<p>
+								Anywhere within Seattle city limits!
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col col-sm-4 col-sm-push-4">
+					<div class="col-inner">
+						<h2>
+							When?
+						</h2>
+						<p>
+							Noon - 11:00 PM
+						</p>
+					</div>
+				</div>
+				<div class="col col-sm-4 col-sm-push-8 col-stack">
+					<div class="stack stack-1">
+						<div class="col-inner">
+							<h2>
+								How?
+							</h2>
+							<p>
+								Pay with cash or card on delivery!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-sm-4 col-sm-push-8">
+					<div class="col-inner">
+						<h2>Your Order</h2>
+						<div class="cart-items-container">
+							<div class="template cart-item-template cart-item row">
+								<div class="col-xs-9">
+									<p><button type="button" class="btn btn-default btn-xs remove-item">&times;</button> 
+										<span class="name"></span> <span class="size"></span>
+									</p>
+								</div>
+								<div class="col-xs-3 col-price">
+									<p>$<span class="price"></span></p>
+								</div>
+							</div>
+						</div>
+						<div class="cart-footer">
+							<div class="row sub-row">
+								<div class="col-xs-9">
+									Subtotal:
+								</div>
+								<div class="col-xs-3">
+									$<span class="sub-price"></span>
+								</div>
+							</div>
+							<div class="row tax-row">
+								<div class="col-xs-9">
+									Tax (9.5%):
+								</div>
+								<div class="col-xs-3">
+									$<span class="tax-price"></span>
+								</div>
+							</div>
+							<div class="row total-row">
+								<div class="col-xs-9">
+									Total:
+								</div>
+								<div class="col-xs-3">
+									$<span class="total-price"></span>
+								</div>
+							</div>
+							<form method="POST" action="http://dawgpizza.com/orders/" class="form-horizontal order-form" role="form">
+								<label class="control-label" for="first-name">Name</label>
+									<input type="text" class="form-control" name="name" id="first-name" placeholder="name" required>
+								<label class="control-label" for="addr-1">Address</label>
+									<input type="text" class="form-control" name="addr-1" id="addr-1" placeholder="street address" required>
+									<input type="text" class="form-control" name="addr-2">
+								<label class="control-label" for="city">Zip</label>
+								<input type="text" class="form-control" name="zip" placeholder="zip code" required>
+								<label class="control-label" for="phone">Phone</label>
+								<input type="tel" class="form-control" name="phone" id="phone" placeholder="primary phone number" required>
+								<input type="hidden" name="cart"></input>
+								<div class="button-row">
+								<button type="button" class="btn btn-primary place-order disabled">$20 minimum</button>
+								<button type="button" class="btn btn-danger start-over">Start Over</button>
+								<button type="button" class="btn btn-success last-order">Use Last Order</button>
+								</div>
+							</form>                    
+						</div>
+					</div>
+				</div>
+				<div class="col col-sm-8 col-sm-pull-4">
+					<div class="col-inner">
+						<h2>
+							Pizzas:
+						</h2>
+						<dl class="pie-list">
+						</dl>
+						<h2>
+							Drinks:
+						</h2>
+						<dl class="drinks">
+						</dl>
+						<h2>
+							Dessert:
+						</h2>
+						<dl class="desserts">
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="template pie">
+				<dt class="item-name">
+				</dt>
+				<dd class="description">
+				</dd>
+				<dd class="price-list">
+					<p class="template price-template btn-group">
+						<button type="button" class="btn btn-default add-to-cart">
+							Buy a <span class="price-size"></span> for $<span class="price-size-price"></span>
+						</button>
+					</p>
+				</dd>
+			</div>
+			<!-- leave space for footer -->
+			<div class="row footer">
+				<div class="col col-sm-12">
+					<div class="col-inner no-fill">
+							<p>
+								&copy;2013, Dawg Pizza | Call us for delivery: 206-555-1212
+							</p>
+							<p>
+								<a href="https://github.com/wood7258/dawgpizza">https://github.com/wood7258/dawgpizza</a>
+							</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="http://www.dawgpizza.com/orders/menu.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/events.js"></script>
+        <script src="js/models.js"></script>
+        <script src="js/views.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/cartItemView.js"></script>
+        <script src="js/cartView.js"></script>
+		<script src="js/order-pizza-view.js"></script>
+		<script src="js/order-pizzas-view.js"></script>
+		<script src="js/order-dedr-view.js"></script>
+		<script src="js/order-dedrs-view.js"></script>
+		<script src="js/order-item-model.js"></script>
+		<script src="js/order-control.js"></script>
+	</body>
+</html>
