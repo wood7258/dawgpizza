@@ -22,17 +22,41 @@ $(function() {
 		}
 	});
 	
-	var pizzasModel = createItemModel({
-		menu: com.dawgpizza.menu.pizzas
+	var temPie;
+	var meatMenu = [];
+	var vegMenu = [];
+	var pidx = 0;
+	for (pidx; pidx < com.dawgpizza.menu.pizzas.length; ++pidx) {
+		temPie = com.dawgpizza.menu.pizzas[pidx];
+		if (temPie.vegetarian)
+			vegMenu.push(temPie);
+		else
+			meatMenu.push(temPie);
+	}
+	
+	var meatModel = createItemModel({
+		menu: meatMenu
 	});
 	
-	var pizzasView = createPizzasView({
-		model: pizzasModel,
+	var meatView = createPizzasView({
+		model: meatModel,
 		template: $('.template.pie'),
-		container: $('.pie-list'),
+		container: $('.meat-list')
 	});
 	
-	pizzasModel.refresh();
+	meatModel.refresh();
+	
+	var vegModel = createItemModel({
+		menu: vegMenu
+	});
+	
+	var vegView = createPizzasView({
+		model: vegModel,
+		template: $('.template.pie'),
+		container: $('.veg-list')
+	});
+	
+	vegModel.refresh();
 	
 	var drinksModel = createItemModel({
 		menu: com.dawgpizza.menu.drinks
